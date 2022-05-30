@@ -2,9 +2,19 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '@material-ui/core';
 import { ShoppingCart } from '@material-ui/icons';
 import { Link, useLocation } from 'react-router-dom';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
+
 
 import logo from '../../assets/commerce.png';
 import useStyles from './styles';
+import { deepPurple, lightBlue, pink } from '@material-ui/core/colors';
+
+const theme = createMuiTheme({
+  palette: {
+    secondary: {
+      main: pink[100]}
+  }
+});
 
 const PrimarySearchAppBar = ({ totalItems }) => {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
@@ -32,14 +42,22 @@ const PrimarySearchAppBar = ({ totalItems }) => {
 
   return (
     <>
-      <AppBar position="fixed" className={classes.appBar} color="inherit">
+      <MuiThemeProvider theme={theme}>
+      <AppBar position="fixed" className={classes.appBar} color="secondary">
+      
         <Toolbar>
           <Typography component={Link} to="/" variant="h6" className={classes.title} color="inherit">
-            <img src={logo} alt="commerce.js" height="25px" className={classes.image} /> Commerce.js
+            <img src={logo} alt="commerce.js" height="25px" className={classes.image} /> The Soul & The Moon
           </Typography>
+          {/* <Typography component={Link} to="/about" variant="h6" className={classes.title} color="inherit">
+          A propos de la marque
+          </Typography> */}
           <div className={classes.grow} />
           {location.pathname === '/' && (
           <div className={classes.button}>
+
+
+ 
             <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
               <Badge badgeContent={totalItems} color="secondary">
                 <ShoppingCart />
@@ -49,6 +67,7 @@ const PrimarySearchAppBar = ({ totalItems }) => {
           )}
         </Toolbar>
       </AppBar>
+      </MuiThemeProvider>
       {renderMobileMenu}
     </>
   );

@@ -1,4 +1,5 @@
 import { makeStyles, fade } from '@material-ui/core/styles';
+import { Gradient } from '@material-ui/icons';
 
 const drawerWidth = 0;
 
