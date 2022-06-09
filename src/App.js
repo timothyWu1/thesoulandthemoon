@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./App.css";
-import { CssBaseline } from '@material-ui/core';
+import { CssBaseline, Slide } from '@material-ui/core';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Navbar, Products, Cart, Checkout, Footer } from './components';
@@ -91,6 +91,8 @@ const App = () => {
         <CssBaseline />
         
         <Navbar pastel totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} />
+      
+        {/* <Slide/> */}
 
         <Switch>
           <Route exact path="/">
