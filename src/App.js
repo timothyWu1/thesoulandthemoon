@@ -105,9 +105,9 @@ const App = () => {
             <Checkout cart={cart} order={order} onCaptureCheckout={handleCaptureCheckout} error={errorMessage} />
           </Route>
         </Switch>
-        {/* <Footer/> */}
+        
       </div>
-
+      <Footer/>
     </Router>
   );
 };

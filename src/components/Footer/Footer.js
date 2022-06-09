@@ -1,22 +1,45 @@
-import React from 'react'
+import React from "react";
+import './Footer.css';
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
-const Footer = () => {
+function Footer () {
   return (
-    <div>
-      <section className='section footer bg-dark text-white'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-12'>
-              <h6>Contact us</h6>
-              <hr/>
-              <h1>salut a tous</h1>
-            </div>
-          </div>
-
-        </div>
+    <section className="footer">
+      <hr className="footer-seperator" />
+      <section className="footer-info__name">
+      
+        The Soul And The Moon
       </section>
-    </div>
+      <section className="footer-info">
+        <section className="footer-info-left">
+          <section className="footer-social-media">
+            <a href="/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </section>        
+        </section>
+        <section className="footer-info-center">
+          <section className="footer-info__email">
+            TheSoulAndTheMoon@gmail.com
+          </section>
+          <section className="footer-info__terms">
+            Copyright The Soul And The Moon
+          </section>
+        </section>
+        <section className="footer-info-right">
+          <section className="footer-info__number">
+            Numéro de telephone
+            <br/>
+            99999999999
+          </section>
+          <section className="footer-info__contact">
+            The soul and the moon
+            <br />
+            Nous contacter
+          </section>
+        </section>
+      </section>
+      <hr className="footer-seperator" />
+    </section>
   )
 }
 
-export default Footer
+export default Footer;
