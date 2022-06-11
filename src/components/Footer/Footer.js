@@ -13,7 +13,7 @@ function Footer () {
       <section className="footer-info">
         <section className="footer-info-left">
           <section className="footer-social-media">
-            <a href="/" target="_blank" rel="noopener noreferrer">Lien Instagram</a>
+            <a href="/" target="_blank" rel="noopener noreferrer">Lien réseau social</a>
           </section>        
         </section>
         <section className="footer-info-center">

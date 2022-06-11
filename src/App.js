@@ -87,10 +87,12 @@ const App = () => {
         
         <Navbar pastel totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} />
       
-        {/* <Slider/> */}
-
+        
+        <br/>
         <Switch>
           <Route exact path="/">
+            {/* <Slider/> */}
+            
             <Products products={products} onAddToCart={handleAddToCart} handleUpdateCartQty />
           </Route>
           {/* <Route exact path="/about" render={() => {window.location.href=" about"}} /> */}

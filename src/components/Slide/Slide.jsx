@@ -1,20 +1,11 @@
-import React from 'react'
-import { Card } from 'react-bootstrap';
+import React from 'react';
+import logo from './frontImage.jpg'; // Tell webpack this JS file uses this image
 
-const Slider = () => {
-  return (
-    <div className="hero">
-        <Card>
-    <Card.Img variant="top" src="project_e_commerce\src\assets\frontImage.jpg" />
-    <Card.Body>
-      <Card.Text>
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </Card.Text>
-    </Card.Body>
-  </Card>
-    </div>
-  )
+console.log(logo); // /logo.84287d09.png
+
+function Slider() {
+  // Import result is the URL of your image
+  return <img src={logo} alt="Logo" />;
 }
 
 export default Slider;
