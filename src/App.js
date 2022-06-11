@@ -3,12 +3,9 @@ import "./App.css";
 import { CssBaseline, Slide } from '@material-ui/core';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Navbar, Products, Cart, Checkout, Footer } from './components';
+import { Navbar, Products, Cart, Checkout, Footer, Slider } from './components';
 import { commerce } from './lib/commerce';
-import {Helmet} from 'react-helmet';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core';
-import red from '@material-ui/core/colors/red';
-import { purple } from '@material-ui/core/colors';
+
 
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -83,16 +80,14 @@ const App = () => {
   return (
     
     <Router>
-      {/* <Helmet>
-      <style>{'body { background-color: pink; }'}</style>
-            </Helmet> */}
+
 
       <div style={{ display: 'flex' }}>
         <CssBaseline />
         
         <Navbar pastel totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} />
       
-        {/* <Slide/> */}
+        {/* <Slider/> */}
 
         <Switch>
           <Route exact path="/">

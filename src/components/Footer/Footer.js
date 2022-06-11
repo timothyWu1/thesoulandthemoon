@@ -8,12 +8,12 @@ function Footer () {
       <hr className="footer-seperator" />
       <section className="footer-info__name">
       
-        The Soul And The Moon
+        <h1>The Soul And The Moon</h1>
       </section>
       <section className="footer-info">
         <section className="footer-info-left">
           <section className="footer-social-media">
-            <a href="/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="/" target="_blank" rel="noopener noreferrer">Lien Instagram</a>
           </section>        
         </section>
         <section className="footer-info-center">
@@ -33,7 +33,7 @@ function Footer () {
           <section className="footer-info__contact">
             The soul and the moon
             <br />
-            Nous contacter
+            Email
           </section>
         </section>
       </section>
